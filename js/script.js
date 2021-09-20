@@ -6,26 +6,16 @@ $(document).ready(function(){
             type: "POST",
             data: $('#contact_form').serialize(),
             beforeSend: function(xhr){
-                document.getElementById("send_message").value = "KAYIT OLUNUYOR...";
-                $('#condition-alert').html('');
+                console.log("beforeSend");
                 },
             success: function(response){
-                if(response != "\"bad\""){
-                    $('#condition-alert').html('<div class="alert alert-success d-inline-block">Kaydınız alınmıştır.</div>'); 
-                    $('input , textarea').val(function(){
-                    return this.defaultValue;
-                });
-                }
-                else{
-                    $('#condition-alert').html('<div class="alert alert-danger d-inline-block">Lütfen tüm alanları eksiksiz doldurunuz.</div>');
-                }
                 console.log(response);
                 },
             error: function(){
-                $('#condition-alert').html('<div class="alert alert-danger d-inline-block">Bir hata oluştu.</div>');
+                console.log("error function");
                 },
             complete: function(){
-                document.getElementById("send_message").value = "KAYIT OL";
+                console.log("complete function");
                 }
             });
         });

@@ -2,7 +2,7 @@ $(document).ready(function(){
     $('#send_message').click(function(){
         event.preventDefault();
         $.ajax({
-            url: "..PHPMailer/sendmail.php",
+            url: "../PHPMailer/sendmail.php",
             type: "POST",
             data: $('#contact_form').serialize(),
             beforeSend: function(xhr){

@@ -27,7 +27,7 @@ try {
 
     //Recipients
     $mail->setFrom('hafizintaciinfo@gmail.com', 'Hafizin Taci');
-    $mail->addAddress('ysertturk@gmail.com');
+    $mail->addAddress('conxeticin3@gmail.com');
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML

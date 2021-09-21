@@ -26,14 +26,14 @@ try {
     $mail->Port       = 587;                                     //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('hafizintaciinfo', 'Hafizin Taci');
+    $mail->setFrom('hafizintaciinfo@gmail.com', 'Hafizin Taci');
     $mail->addAddress('ysertturk@gmail.com');
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'YENI KAYIT';
     $mail->Body    =
-    '<b>Ogrenci Bilgileri</b><br>'.  
+    '<b>Ogrenci Bilgileri</b><br>'.
     'Isim Soyisim: ' .$_POST['name'].'<br>'.
     'Dogum Tarihi: ' .$_POST['birthday'].'<br>'.
     'Dogum Yeri: ' .$_POST['birthplace'].'<br>'.

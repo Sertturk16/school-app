@@ -1,8 +1,8 @@
 $(document).ready(function(){
-    $('#send_message').click(function(){
+    $('#send_message').click(function(event){
         event.preventDefault();
         $.ajax({
-            url: "mail.php",
+            url: "./mail.php",
             type: "POST",
             data: $('#contact_form').serialize(),
             beforeSend: function(xhr){
